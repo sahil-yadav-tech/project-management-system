@@ -1,36 +1,32 @@
+
 {
-  "name": "server",
+  "name": "scalable-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "Scalable SaaS backend using Node.js, Express and Drizzle ORM",
+  "type": "module",
+  "main": "src/server.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6",
-    "@types/node": "^26.6.6",
-    "@types/pg": "^8.23.1",
-    "drizzle-kit": "^1.0.0-rc.5",
-    "tsx": "^4.23.15",
-    "typescript": "^7.0.2"
-  },
   "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^18.0.10",
-    "drizzle-orm": "^1.0.0-rc.5",
-    "express": "^5.3.0",
-    "mongoose": "^9.12.2",
-    "pg": "^8.23.1"
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.44.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.5",
+    "drizzle-kit": "^0.31.4",
+    "nodemon": "^3.1.10"
   }
 }
